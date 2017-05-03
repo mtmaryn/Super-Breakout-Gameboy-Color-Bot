@@ -61,15 +61,15 @@ function movement()
 		t["B"] = false
 	end
 	
-	if bx < pl and theLine then
+	if bx2 < pm  then
 		t["Left"] = true
-	elseif bx > pm then
+	elseif bx > pl  then
 		t["Left"] = false
 	end
 		
-	if bx2 > pr and theLine then
+	if bx > pm  then
 		t["Right"] = true
-	elseif bx2 < pm then
+	elseif bx2 < pr  then
 		t["Right"] = false
 	end
 	
@@ -79,8 +79,8 @@ end
 while true do
 	getStuff()
 	movement()
-	gui.drawBox(pl, screen_y-8, pr, screen_y, 0xFF000000, 0x80808080)
+	--gui.drawBox(pl, screen_y-8, pr, screen_y, 0xFF000000, 0x80808080)
 	--gui.drawBox(0, by, screen_x, by+8, 0xFF000000, 0x80808080)
-	gui.drawBox(bx, by, bx2, by2, 0xFF000000, 0x80808080)
+	--gui.drawBox(bx, by, bx2, by2, 0xFF000000, 0x80808080)
 	emu.frameadvance()
 end
